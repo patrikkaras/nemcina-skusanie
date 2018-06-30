@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Deutsch</title>
+		<meta charset="utf-8">
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="index.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="container">
+			<h4>Deklination des Adjektivs</h2>
+			<form class="form-horizontal col-xs-10" action="">
+				<div class="form-group">
+					<label class="control-label col-xs-3" for="pad">Fall:</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" id="pad" placeholder="" name="pad" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-xs-3" for="clen">Artikel:</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" id="clen-typ" placeholder="" name="clen-typ" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-xs-3" for="prid">Adjektiv:</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" id="prid" placeholder="" name="prid" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-xs-3" for="podst">Nomen:</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" id="podst" placeholder="" name="podst" readonly>
+					</div>
+				</div>
+
+				<div class="form-group has-feedback" id="result-group">
+					<label class="control-label col-xs-3" for="result">Resultat:</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" id="result" placeholder="" name="result">
+						<span class="glyphicon form-control-feedback" id="result-glyph"></span>
+					</div>
+				</div>
+				<div class="form-group" id="result-group">
+					<label class="control-label col-xs-3" for="correct-result">Richtig Resultat:</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" id="correct-result" placeholder="" name="correct-result" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-offset-3 col-xs-9">
+						<div class="checkbox">
+							<label><input type="checkbox" id="show-transl" checked> Übersetzung Zeigen</label>
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox" id="show-artik" checked> Artikel Zeigen</label>
+						</div>
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-default disabled" id="submit">Überprüfen</button>
+				<button class="btn btn-default" id="next">Nächste Wort</button>
+			</form>
+		</div>
+	</body>
+</html>
